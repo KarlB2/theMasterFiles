@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    align-self: center;
+}
+
+h1 {
+    color: blue;
+}
+
+.storage {
+    text-align: center;
+    background-color: bisque;
+    font-weight: bold;
+    font-size: 25px;
+    margin: auto;
+    padding: 200px, 200px;
+    border: 4px;
+}
+
+.rows {
+
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 200px;
+}
+
+.list {
+    text-align: left;
+    background: tan;
+    width: 200px;
+    padding: 10px;
+}
