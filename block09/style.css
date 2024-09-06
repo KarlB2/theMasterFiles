@@ -1,0 +1,45 @@
+.banner {
+    display: flex;
+    background: orange;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.nav_bar {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav_item {
+    background: white;
+    color: black;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 15px;
+    margin: 10px;
+}
+
+.current_page {
+    background: silver;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paragraph_box {
+    margin: 20px 25px;
+    padding: 10px 15px;
+    width: 30%;
+    background: silver;
+}
+
+.image {
+    height: 200px;
+    margin: 20px 25px
+}
