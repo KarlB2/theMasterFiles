@@ -28,6 +28,8 @@ h1 {
 
 .row {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .paragraph_box {
@@ -35,4 +37,9 @@ h1 {
     padding: 10px 15px;
     width: 30%;
     background: silver;
+}
+
+.image {
+    height: 200px;
+    margin: 20px 25px
 }
