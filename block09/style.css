@@ -1,6 +1,10 @@
+body {
+    background-color: rgb(230, 230, 230);
+}
+
 .banner {
     display: flex;
-    background: orange;
+    background: rgb(97, 93, 86);
     padding: 10px 20px;
 }
 
