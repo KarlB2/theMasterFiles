@@ -1,0 +1,69 @@
+.background {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background: green;
+    gap: 2.5%;
+    row-gap: 1em;
+    padding: 10px;
+    z-index: 1;
+}
+
+.top_square {
+    background: blue;
+    width: 20%;
+    height: 4em;
+}
+
+.bottom_square {
+    background: red;
+    width: 40%;
+    height: 20em;
+}
+
+.forground {
+    position: absolute;
+    z-index: 2;
+    background-color: purple;
+    width: 20%;
+    height: 2em;
+}
+
+.form_container {
+    position: relative;
+}
+
+/* .wrapper {
+    position: relative;
+}
+
+.dashed-box {
+    position: relative;
+    z-index: 1;
+    border: dashed;
+    height: 8em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.gold-box {
+    position: absolute;
+    z-index: 3;
+    background: gold;
+    width: 80%;
+    left: 60px;
+    top: 3em;
+}
+
+.green-box {
+    position: absolute;
+    z-index: 2;
+    background: lightgreen;
+    width: 20%;
+    left: 65%;
+    top: -25px;
+    height: 7em;
+    opacity: 0.9;
+} */
