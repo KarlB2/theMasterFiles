@@ -1,0 +1,15 @@
+.nav {
+    background: purple
+}
+
+.content {
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content_box {
+    width: 40%;
+    background: blue;
+}
