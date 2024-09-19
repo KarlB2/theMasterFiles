@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="formStyle.css">
+    <title>CONTACT ME!</title>
+</head>
+
+<body>
+    <header class="banner">
+        <h1>YOU MUST HIRE KYLE!</h1>
+        <nav class="nav_bar">
+            <div class="nav_item">
+                <a href="main.html" class="nav_text">Main Page</a>
+            </div>
+            <div class="nav_item">
+                <a href="about.html">About Page</a>
+            </div>
+            <div class="nav_item">
+                <a href="portfolio.html">Portfolio Page</a>
+            </div>
+        </nav>
+    </header>
+    <div class="form_container">
+        <div class="contact_form">
+            <h2>YOU MUST ANSWER THE QUESTIONS!!!</h2>
+            <form id="form" action="success.html">
+                <div class="input">
+                    <label for="name">WHAT'S YOUR FULL NAME?</label><br>
+                    <input type="text" class="form_item" id="name" name="name" placeholder="First and last name">
+                </div>
+                <div class="input">
+                    <label for="email">WHAT'S YOUR EMAIL ADDRESS?</label><br>
+                    <input type="email" class="form_item" id="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="input">
+                    <label for="message">WHAT DO YOU WANT?</label><br>
+                    <input type="text" class="form_item" id="message" name="message"
+                        placeholder="Tell me what you want">
+                </div>
+                <div class="input">
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
