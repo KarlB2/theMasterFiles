@@ -30,24 +30,6 @@ h1 {
     background: silver;
 }
 
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.paragraph_box {
-    margin: 20px 25px;
-    padding: 10px 15px;
-    width: 30%;
-    background: silver;
-}
-
-.image {
-    height: 200px;
-    margin: 20px 25px
-}
-
 .footer {
     display: flex;
     background: rgb(97, 93, 86);
