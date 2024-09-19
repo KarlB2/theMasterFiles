@@ -30,6 +30,11 @@ h1 {
     background: silver;
 }
 
+.footer {
+    display: flex;
+}
+
+
 .row {
     display: flex;
     align-items: center;
