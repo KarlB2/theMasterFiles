@@ -1,52 +1,30 @@
-/***********
- * Problem 1
- * 
- * Get all names that start with 'A'
- **/
+// Write a class to describe a Car
+// A car should have a color, a make, a model, and a year. 
+// There should be a method to return the details of the car
+// There should be a method to change the color of the car.
 
-const names = ['Alice', 'Bob', 'Adam', 'Eve'];
-const aNames = names.filter(currentName => currentName[0] == "A");
+class Car {
+    constructor(make, model, year, color) {
+        this.color = color;
+        this.make = make;
+        this.model = model;
+        this.year = year
+    }
+    details() {
+        return { year: this.year, make: this.make, model: this.model, color: this.color }
+    }
+    repaint(newColor) {
+        this.color = newColor
+    }
+}
 
-console.log(aNames);
+////////////////////// Test Case ////////////////////////////
+///////////////// No need to modify below ///////////////////
 
-/***********
- * Problem 2
- * 
- * Multiply all numbers by 2
- **/
+const car1 = new Car("Toyota", "Corolla", 2020, "blue");
 
-const nums = [2, 4, 6, 8];
-const timesTwo = nums.map(num => num * 2);
-
-console.log(timesTwo);
-
-/***********
- * Problem 3
- * 
- * Find the longest string in the array
- **/
-
-const words = ['apple', 'banana', 'cherry', 'date'];
-const findLongest = words.reduce((BiggestWord, currentWord) => currentWord.length > BiggestWord.length ? currentWord : BiggestWord, " ")
-
-console.log(findLongest)
-
-/***********
- * Problem 4
- * 
- * Identify the first even number in the array
- **/
-
-const values = [1, 3, 5, 4, 2];
-const findFirstEven = values.filter(num => num % 2 == 0)
-
-console.log(findFirstEven)
-
-/***********
- * Problem 5
- * 
- * Return an array containing all the unique numbers in the array
- **/
-
-const numbers = [1, 2, 2, 3, 4, 4, 5];
-
+const carDetails = car1.details();
+console.log(carDetails); // should output car details
+car1.repaint('green');
+const updatedDetails = car1.details();
+console.log(updatedDetails); // should output car details with color green
