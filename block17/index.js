@@ -11,9 +11,12 @@ class Numbers {
   }
   count() {
     //return the count of numbers in data
+    return this.data.length
   }
   printNumbers() {
     //print the numbers in data
+  let d = this.data
+  console.log(d)
   }
   odds() {
     //return the odd numbers in data
