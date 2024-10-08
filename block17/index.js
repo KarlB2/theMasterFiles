@@ -11,30 +11,35 @@ class Numbers {
   }
   count() {
     //return the count of numbers in data
-    return this.data.length
+    return this.data.length;
   }
   printNumbers() {
     //print the numbers in data
-  let d = this.data
-  console.log(d)
+    console.log(this.data)
   }
   odds() {
     //return the odd numbers in data
+    return this.data.filter(element => element % 2 == 1);
   }
   evens() {
     //return the even numbers in data
+    return this.data.filter(element => element % 2 == 0);
   }
   sum() {
     //return the sum of the numbers
+    return this.data.reduce((acc, element) => acc + element, 0)
   }
   product() {
     //return the product of the numbers
+    return this.data.reduce((acc, element) => acc * element, 1)
   }
   greaterThan(target) {
     //return the numbers greater than the target
+    return this.data.filter((element) => element > target)
   }
   howMany(target) {
     //return the count of a given number
+    return this.data.reduce((acc, element) => element == target ? acc + 1 : acc, 0)
   }
 }
 
