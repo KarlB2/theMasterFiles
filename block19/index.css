@@ -1,0 +1,14 @@
+#jobTable {
+    border: 3px black solid;
+    align-self: center;
+}
+
+.counter {
+    display: flexbox;
+    justify-content: center;
+}
+
+.colum {
+    border: 3px black solid;
+
+}

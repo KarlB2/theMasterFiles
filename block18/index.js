@@ -23,5 +23,6 @@ Concat Odd (both arrays) {
         }
 
     }
+Edg Cases: If both inputs are not
 
 */
