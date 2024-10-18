@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Bank</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <h1>Number Bank</h1>
+  <div class="section" id="addSection">
+    <div class="flexed">
+      <h3>Add Number</h3>
+      <input type="text" id="unsavedNum" placeholder="type numbers using spaces (1 2 3)">
+      <button id="addButton" onclick="addNum('#unsavedNum', '#numBank')">Add Numbers</button>
+    </div>
+  </div>
+  <div class="section" id="bankSection">
+    <h2 class="fullLine">Number Bank</h2>
+    <p class="numHolder" id="numBank">10</p>
+    <div class="flexed">
+      <button id="sortOneNum" onclick="sortFirst('#numBank', '#oddNum', '#evenNum')">Sort Next Number</button>
+      <button id="sortAllNum" onclick="sortAll('#numBank')">Sort All Numbers</button>
+    </div>
+  </div>
+  <div class="section" id="sortedSection">
+    <h2 class="fullLine">Sorted Numbers</h2>
+    <h2 class="fullLine">Odds</h2>
+    <p class="numHolder" id="oddNum"></p>
+    <h2 class="fullLine">Evens</h2>
+    <p class="numHolder" id="evenNum"></p>
+  </div>
+</body>
+
+</html>
