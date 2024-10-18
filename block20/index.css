@@ -1,0 +1,16 @@
+.section {
+    margin: 10%;
+    border: 2px black solid;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.flexed {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+
+.fullLine {
+    size: 90%;
+}
