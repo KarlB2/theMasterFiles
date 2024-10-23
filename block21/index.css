@@ -1,14 +1,15 @@
 .section {
-    margin: 10%;
+    margin: 1%;
+    padding: 2%;
     border: 2px black solid;
     border-radius: 3px;
-    padding: 10px 20px;
+    align-items: center;
 }
 
 .flexed {
     display: flex;
     justify-content: center;
-    gap: 20%;
+    gap: 1%;
 }
 
 .fullLine {
