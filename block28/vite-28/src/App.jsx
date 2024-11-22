@@ -2,7 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import './App.css'
 import Green from "./Green";
 import Red from './Red';
-import Blue from './Blue';
+import Blue from "./Blue";
 
 function App() {
   return (
