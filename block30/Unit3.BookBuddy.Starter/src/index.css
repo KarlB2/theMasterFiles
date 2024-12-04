@@ -1,0 +1,41 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #f8f8f8;
+  margin: 1em;
+  padding: 1em;
+}
+
+#logo-image {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/* Add your own custom styles here */
+#book-display {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10%;
+}
+
+#book-display>div {
+  width: 25%;
+  background-color: grey;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+#book-display>div>img {
+  width: 50%
+}
+
+#gen-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em
+}
+
+#gen-detail>div {
+  padding: 1em
+}
