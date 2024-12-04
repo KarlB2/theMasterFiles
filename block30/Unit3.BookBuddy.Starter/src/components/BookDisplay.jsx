@@ -1,25 +1,13 @@
 import BookBlock from "./BookBlock";
 import { useState, useEffect } from "react";
+import { getBooks } from "../API/api";
 
-export default function BookDisplay({ setBookId, setLoading, loading, api, filter }) {
+export default function BookDisplay({ setBookId, setLoading, loading, filter }) {
     const [books, setBooks] = useState([])
 
     useEffect(() => {
-
-        async function getBooks() {
-            fetch(`${api}/books`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            }).then(response => response.json())
-                .then(reply => {
-                    setBooks(reply.books.filter((f) => filter ? filter(f) : true))
-                    setLoading(false)
-                })
-                .catch(console.error)
-        }
-        getBooks();
-    })
+        getBooks(filter, setBooks, setLoading);
+    }, [filter])
 
     return (
         <>

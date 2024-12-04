@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import BookDisplay from "../components/BookDisplay";
 
-export default function Books({ setBookId, api, loading, setLoading }) {
+export default function Books({ setBookId, setLoading }) {
     const [search, setSearch] = useState('')
     const [available, setAvailable] = useState(false)
 
@@ -11,7 +11,7 @@ export default function Books({ setBookId, api, loading, setLoading }) {
         <div>
             <input onChange={(f) => setSearch(f.target.value)} value={search}></input>
             <button onClick={(() => setAvailable(!available))}>{available ? "Show All" : "Show Available"}</button>
-            <BookDisplay filter={((f) => f.title.toLowerCase().includes(search.toLowerCase()) && (!available || f.available))} api={api} setBookId={setBookId} setLoading={setLoading} />
+            <BookDisplay filter={((f) => f.title.toLowerCase().includes(search.toLowerCase()) && (!available || f.available))} setBookId={setBookId} setLoading={setLoading} />
         </div>
     )
 }

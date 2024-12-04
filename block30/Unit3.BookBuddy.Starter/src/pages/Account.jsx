@@ -2,50 +2,23 @@
 import { useEffect, useState } from "react"
 import GoToButton from "../components/GoToButton";
 import BookDisplay from "../components/BookDisplay";
+import { getAccount } from "../API/api";
+import { getReservations } from "../API/api";
 
-export default function Account({ token, setToken, setBookId, api, loading, setLoading }) {
+export default function Account({ token, setToken, setBookId, loading, setLoading }) {
 
     const [user, setUser] = useState({})
-    const [books, setBooks] = useState([])
+    const [reservations, setReservations] = useState([])
 
     useEffect(() => {
         if (!token) return;
-
-        async function getAccount() {
-            fetch(`${api}/users/me`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
-            }).then(response => response.json())
-                .then(result => {
-                    setUser(result)
-                    setLoading(false)
-                })
-                .catch(console.error)
-        }
-
-        getAccount();
-    }, /*I'm proud of this one*/[token])
+        getAccount(token, setUser, setLoading);
+    }, [token])
 
     useEffect(() => {
         if (!token) { return };
 
-        async function getBooks() {
-            fetch(`${api}/reservations`, {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
-            }).then(response => response.json())
-                .then(result => {
-                    setBooks(result.reservation)
-                    setLoading(false)
-                })
-                .catch(console.error)
-        }
-
-        getBooks();
+        getReservations(token, setReservations, setLoading);
 
     }, [user])
 
@@ -60,8 +33,8 @@ export default function Account({ token, setToken, setBookId, api, loading, setL
                     </>
                 )}
 
-            <BookDisplay filter={((c) => books.find((f) => f.title == c.title))}
-                api={api} setBookId={setBookId} setLoading={setLoading} />
+            <BookDisplay filter={((c) => reservations.find((f) => f.title == c.title))}
+                setBookId={setBookId} setLoading={setLoading} />
 
         </div>
     )

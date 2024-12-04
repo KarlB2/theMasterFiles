@@ -1,8 +1,9 @@
 /* TODO - add your code to create a functional React component that renders a registration form */
 import { useState, useEffect } from "react"
 import GoToButton from "../components/GoToButton"
+import { postRegister } from "../API/api"
 
-export default function Register({ setToken, setLoading, api }) {
+export default function Register({ setToken, setLoading }) {
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
@@ -12,26 +13,6 @@ export default function Register({ setToken, setLoading, api }) {
     useEffect(() => {
         setValid(password && email && firstName && lastName)
     })
-
-    async function onSubmit() {
-        fetch(`${api}/users/register`, {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                firstname: firstName,
-                lastname: lastName,
-                email: email,
-                password: password
-            })
-        }).then(response => response.json())
-            .then(result => {
-                setToken(result.token);
-            })
-            .catch(console.error);
-
-    }
 
     return (
         <div>
@@ -49,7 +30,7 @@ export default function Register({ setToken, setLoading, api }) {
             <label>
                 Password <input type="password" onChange={(e) => setPassword(e.target.value)} value={password} />
             </label>
-            {valid ? <GoToButton text="Sumbit" toRoute="/Account" func={onSubmit} setLoading={setLoading} /> :
+            {valid ? <GoToButton text="Sumbit" toRoute="/Account" func={(() => postRegister(firstName, lastName, email, password, setToken))} setLoading={setLoading} /> :
                 <button disabled={true}>Submit</button>}
 
         </div>
