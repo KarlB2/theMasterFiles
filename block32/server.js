@@ -21,7 +21,6 @@ app.use(require('morgan')('dev'));
 app.post('/api/flavors', async (req, res, next) => {
     try {
         const { name } = req.body
-        console.log(name)
         const SQL = "INSERT INTO flavors(name) VALUES($1);"
         const response = await client.query(SQL, [name])
         res.json(response.rows[0])
@@ -40,6 +39,7 @@ app.get('/api/flavors', async (req, res, next) => {
         console.error(error)
     }
 });
+
 app.get('/api/flavors/:id', async (req, res, next) => {
     try {
         const SQL = `SELECT * from flavors WHERE id = ${req.params.id};`
@@ -62,7 +62,6 @@ app.delete('/api/flavors/:id', async (req, res, next) => {
 app.put('/api/flavors/:id', async (req, res, next) => {
     try {
         const { name, favorite } = await req.body;
-        console.log("hello")
         const SQL = "UPDATE flavors SET name = $1, favorite = $2 WHERE id = $3 RETURNING *;";
         const response = await client.query(SQL, [name, favorite, req.params.id])
         res.json(response.rows[0])
@@ -94,6 +93,10 @@ async function init() {
         INSERT INTO flavors(name) VALUES('cocolate');
         INSERT INTO flavors(name) VALUES('mint');
         `
+
+
+        console.log("Tables Created");
+
         await client.query(SQL);
 
     } catch (error) {
